@@ -66,6 +66,10 @@ h1, p {
     grid-row: 2/3; 
 }
 
+.head-info:last-child {
+    color: red;
+} 
+
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 4rem; 
@@ -100,7 +104,7 @@ h1 {
      grid-row: 5;
      justify-content: flex-start;
      position: relative;
-     top: 50vh;
+     top: 45vh;
      right: 30vw;
      filter: drop-shadow(5px 5px 5px #222); 
  
@@ -112,8 +116,9 @@ h1 {
   top:0;
   left:0;
   grid-row: 5; 
+  grid-column: 1/12;
   width: 100%;
-  max-height:500px;
+  max-height: 500px;
   margin:0;
   overflow-y:auto;
   overflow-x:hidden;
@@ -138,25 +143,50 @@ h1 {
   margin:10px;
 }
 
-/* .beetle { 
-    
-    animation:rotate 3s linear infinite; 
-}
-
-@keyframes rotate { 100% { 
-    transform:rotate(-360deg);
-    }
-} */
-
 footer { 
     grid-row: 12;
     grid-column: 2/13;
     width: 100%; 
-    
+    font-size: 0.5rem;
+    text-transform: lowercase;
 }
 
 .bold { 
     font-family: 'Roboto', sans-serif;
     text-transform: upppercase; 
     font-weight: bold;
+}
+
+
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .horizontal-scroll-wrapper{
+        grid-row: 4/10;
+        grid-column: 1/12;
+        position: relative;
+        top: -10%;
+    }
+
+    .squares > img{
+        width: 70vw;
+        height: 70vh;
+      }
+
+
+    footer {
+        grid-column: 2/12;
+    }
+
+
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .horizontal-scroll-wrapper {
+        display: none;
+    }
+
+
 }
